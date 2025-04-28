@@ -5,6 +5,9 @@ public class MyWorld extends World {
         super(600, 400, 1);
         
         Frog frog = new Frog();
-        addObject(frog, 100, 200);
+        addObject(frog, 300, 200);
+        
+        Bug bug = new Bug();
+        addObject(bug, 300, 0);
     }
 }
