@@ -15,5 +15,6 @@ public class Bug extends Actor
     public void act()
     {
         // Add your action code here.
+        setLocation(getX(), getY() + 1);
     }
 }
