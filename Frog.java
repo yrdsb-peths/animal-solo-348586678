@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Frog here.
+ * The frog, our hero or main character.
  * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ * @author (Kian) 
+ * @version April 28th
+*/
 public class Frog extends Actor
 {
     /**
@@ -15,5 +15,6 @@ public class Frog extends Actor
     public void act()
     {
         // Add your action code here.
+        move(1);
     }
 }
