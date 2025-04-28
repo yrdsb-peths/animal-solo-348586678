@@ -20,8 +20,8 @@ public class Bug extends Actor
         setLocation(x, y);
         
         //remove bug and deaw game over when apple hits the bottom
-        MyWorld world = (MyWorld getWorld();
-        if(getY() <= world.getHeight())
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
         {
             world.gameOver();
             world.removeObject(this);
