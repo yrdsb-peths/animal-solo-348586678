@@ -26,12 +26,15 @@ public class Frog extends Actor
         eat();
     }
     
+    
+    
     public void eat()
     {
         if(isTouching(Bug.class)){
             removeTouching(Bug.class);
             MyWorld world = (MyWorld) getWorld();
             world.createBug();
+            world.increaseScore();
         }
     }
 }
