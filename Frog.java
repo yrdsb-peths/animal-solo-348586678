@@ -23,6 +23,15 @@ public class Frog extends Actor
             move(1);
         }
         // remove the bug if the frog eats it
-        removeTouching(Bug.class);
+        eat();
+    }
+    
+    public void eat()
+    {
+        if(isTouching(Bug.class)){
+            removeTouching(Bug.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createBug();
+        }
     }
 }
