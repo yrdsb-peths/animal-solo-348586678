@@ -22,5 +22,7 @@ public class Frog extends Actor
         {
             move(1);
         }
+        // remove the bug if the frog eats it
+        removeTouching(Bug.class);
     }
 }
