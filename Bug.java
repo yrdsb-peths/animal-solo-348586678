@@ -14,6 +14,7 @@ public class Bug extends Actor
      */
     public void act()
     {
+        setImage("fly");
         // Add your action code here.
         int x  = getX();
         int y = getY() + 2;

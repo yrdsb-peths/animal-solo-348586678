@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+
 /**
  * The frog, our hero or main character.
  * 
@@ -14,6 +15,7 @@ public class Frog extends Actor
      */
     public void act()
     {
+        setImage("frog");
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
