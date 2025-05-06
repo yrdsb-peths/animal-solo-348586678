@@ -15,6 +15,19 @@ public class Frog extends Actor
     }
     
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    GreenfootImage idle = new GreenfootImage("images/frog_idle/idle 0.png");
+    
+    /**
+     * Constructor 
+     */
+    public Frog()
+    {
+        for(int i = 0; i < idle.length; i++)
+        {
+            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
     
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever
@@ -44,6 +57,7 @@ public class Frog extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createBug();
             world.increaseScore();
+            elephantSound;
         }
     }
 }
