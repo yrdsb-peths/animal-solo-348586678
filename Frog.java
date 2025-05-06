@@ -15,7 +15,7 @@ public class Frog extends Actor
     }
     
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage idle = new GreenfootImage("images/frog_idle/idle 0.png");
+    GreenfootImage[] idle = new GreenfootImage[5];
     
     /**
      * Constructor 
@@ -24,9 +24,16 @@ public class Frog extends Actor
     {
         for(int i = 0; i < idle.length; i++)
         {
-            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idle[i] = new GreenfootImage("images/frog_idle/idle" + i + ".png");
         }
         setImage(idle[0]);
+    }
+    
+    int imageIndex = 0;
+    public void animateFrog()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = imageIndex + 1 % idle.length;
     }
     
     /**
@@ -46,6 +53,7 @@ public class Frog extends Actor
         }
         // remove the bug if the frog eats it
         eat();
+        animateFrog();
     }
     
     
@@ -57,7 +65,7 @@ public class Frog extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createBug();
             world.increaseScore();
-            elephantSound;
+            elephantSound.play();
         }
     }
 }
