@@ -9,16 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 */
 public class Frog extends Actor
 {
-    public void myFrog()
-    {
-        setImage("frog.png");
-    }
     
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[5];
     GreenfootImage[] idleLeft = new GreenfootImage[5];
     String facing = "right";
-    
+    SimpleTimer animationTimer = new SimpleTimer();
     /**
      * Constructor 
      */
@@ -36,6 +32,9 @@ public class Frog extends Actor
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(50,50);
         }
+        
+        animationTimer.mark();
+        
         //initial frog image
         setImage(idleRight[0]);
     }
@@ -43,6 +42,12 @@ public class Frog extends Actor
     int imageIndex = 0;
     public void animateFrog()
     {
+        if(animationTimer.millisElapsed() < 200)
+        {
+            return;
+        }
+        animationTimer.mark();
+        
         if (facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);
@@ -59,7 +64,7 @@ public class Frog extends Actor
      */
     public void act()
     {
-        myFrog();
+        
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
