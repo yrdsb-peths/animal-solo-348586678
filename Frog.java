@@ -14,6 +14,8 @@ public class Frog extends Actor
         setImage("frog.png");
     }
     
+    GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    
     /**
      * Act - do whatever the Frog wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
