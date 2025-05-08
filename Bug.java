@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bug extends Actor
 {
+    int speed = 1;
     public void myBug()
     {
         setImage("fly.png");
@@ -22,7 +23,7 @@ public class Bug extends Actor
         myBug();
         // Add your action code here.
         int x  = getX();
-        int y = getY() + 2;
+        int y = getY() + speed;
         setLocation(x, y);
         
         //remove bug and deaw game over when apple hits the bottom
@@ -33,5 +34,12 @@ public class Bug extends Actor
             world.removeObject(this);
         }
         
+        
+        
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }
