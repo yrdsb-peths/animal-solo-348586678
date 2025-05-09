@@ -1,12 +1,14 @@
 import greenfoot.*;
 
 public class MyWorld extends World {
+    
     public int score = 0;
     Label scoreLabel;
     int level = 1;
     public MyWorld() {
         super(600, 400, 1, false);
         
+        setBackground("images/background grass.png");
         //create frog
         Frog frog = new Frog();
         addObject(frog, 300, 300);

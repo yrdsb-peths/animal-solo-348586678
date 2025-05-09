@@ -11,7 +11,7 @@ public class Bug extends Actor
     int speed = 1;
     public void myBug()
     {
-        setImage("fly.png");
+        setImage("images/fly.png");
     }
     
     /**
